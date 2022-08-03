@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Home from "./components/sections";
+import PageLoading from "./components/sections/page-loading";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const [loading, setLoading] = useState(false);
+
+   useEffect(() => {
+      const timeout = setTimeout(() => {
+         setLoading(false);
+      }, 2000);
+
+      return () => clearTimeout(timeout);
+   }, []);
+
+   return <div>{loading ? <PageLoading isVisible={loading} /> : <Home />}</div>;
 }
 
 export default App;
