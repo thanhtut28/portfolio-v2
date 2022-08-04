@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Home from "./components/sections";
-import PageLoading from "./components/sections/page-loading";
+import Home from "./sections";
+import PageLoading from "./sections/page-loading";
 
 function App() {
    const [loading, setLoading] = useState(false);

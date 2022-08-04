@@ -12,7 +12,7 @@ const variant: Variants = {
       opacity: 1,
    },
    exit: {
-      opacity: 0,
+      opacity: 1,
    },
 };
 
@@ -25,10 +25,10 @@ const PageLoading: React.FC<Props> = ({ isVisible }) => {
                variants={variant}
                animate="show"
                exit="exit"
-               className="w-full h-[100vh] fixed flex flex-col justify-center items-center"
+               className="w-full bg-black h-[100vh] fixed flex flex-col justify-center items-center"
             >
                <div>
-                  <HashLoader color="#5f1075" loading={isVisible} size={50} />
+                  <HashLoader color="#AFD7B3" loading={isVisible} size={50} />
                </div>
             </motion.div>
          )}

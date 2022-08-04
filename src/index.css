@@ -5,8 +5,7 @@
 @font-face {
    font-family: "Ginto Nord";
    font-weight: 100;
-   src: local("Ginto Nord"), format("woff2"),
-      url("../public/fonts/ABCGintoNord-Hairline-Trial.woff2");
+   src: url("../public/fonts/ABCGintoNord-Hairline-Trial.woff2");
 }
 
 @font-face {
@@ -18,26 +17,25 @@
 @font-face {
    font-family: "Ginto Nord";
    font-weight: 300;
-   src: local("Ginto Nord"), format("woff2"), url("../public/fonts/ABCGintoNord-Light-Trial.woff2");
+   src: url("../public/fonts/ABCGintoNord-Light-Trial.woff2");
 }
 
 @font-face {
    font-family: "Ginto Nord";
    font-weight: 400;
-   src: local("Ginto Nord"), format("woff2"),
-      url("../public/fonts/ABCGintoNord-Regular-Trial.woff2");
+   src: url("../public/fonts/ABCGintoNord-Regular-Trial.woff2");
 }
 
 @font-face {
    font-family: "Ginto Nord";
    font-weight: 500;
-   src: local("Ginto Nord"), format("woff2"), url("../public/fonts/ABCGintoNord-Medium-Trial.woff2");
+   src: local("Ginto Nord");
 }
 
 @font-face {
    font-family: "Ginto Nord";
    font-weight: 600;
-   src: local("Ginto Nord"), format("woff2"), url("../public/fonts/ABCGintoNord-Bold-Trial.woff2");
+   src: local("Ginto Nord");
 }
 
 @font-face {
@@ -52,6 +50,40 @@
    src: url("../public/fonts/ABCGintoNord-Ultra-Trial.woff2");
 }
 
+@font-face {
+   font-family: "Neue Montreal";
+   font-weight: 300;
+   src: url("../public/fonts/NeueMontreal-Light.otf");
+}
+
+@font-face {
+   font-family: "Neue Montreal";
+   font-weight: 400;
+   src: url("../public/fonts/NeueMontreal-Regular.otf");
+}
+
+@font-face {
+   font-family: "Neue Montreal";
+   font-weight: 500;
+   src: url("../public/fonts/NeueMontreal-Medium.otf");
+}
+
+@font-face {
+   font-family: "Neue Montreal";
+   font-weight: 600;
+   src: url("../public/fonts/NeueMontreal-Bold.otf");
+}
+
+@layer base {
+   html {
+      font-family: Ginto Nord, system-ui, sans-serif;
+   }
+   p,
+   h6 {
+      font-family: Neue Montreal, sans-serif;
+   }
+}
+
 body {
-   @apply bg-black overflow-x-hidden;
+   @apply bg-white overflow-x-hidden;
 }

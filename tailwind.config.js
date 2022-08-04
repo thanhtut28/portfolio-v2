@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
    content: ["./src/**/*.{js,jsx,ts,tsx}"],
    theme: {
       extend: {
          fontFamily: {
-            sans: ["Ginto Nord", ...defaultTheme.fontFamily.sans],
+            sans: ["Ginto Nord", "Neue Montreal", ...defaultTheme.fontFamily.sans],
          },
 
          colors: {
@@ -13,6 +14,7 @@ module.exports = {
          },
          backgroundImage: {
             "pattern-image": `url('../public/assets/pattern_circles.png')`,
+            wave: `url('../public/assets/wave.svg')`,
          },
          screens: {
             "small-phones": { max: "400px" },
