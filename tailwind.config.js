@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 
+const colors = ["red", "lime", "teal", "sky", "violet", "pink", "rose"];
+
 module.exports = {
    content: ["./src/**/*.{js,jsx,ts,tsx}"],
    theme: {
@@ -22,6 +24,7 @@ module.exports = {
       },
    },
    plugins: [],
+   safelist: colors.map(color => `bg-${color}-100`),
 };
 
 function getColors() {

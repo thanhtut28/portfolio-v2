@@ -25,7 +25,7 @@ const About: React.FC = () => {
                      "xl:text-6xl"
                   )}
                >
-                  Current Working as
+                  Currently Working as
                </h4>
                <h4
                   className={cn(
@@ -58,7 +58,7 @@ const About: React.FC = () => {
                         "lg:px-10 lg:py8"
                      )}
                   >
-                     <h6 className="text-xl font-semibold">Education Background</h6>
+                     <h6 className="text-xl font-semibold">Educational Background</h6>
                      <div className="h-full flex items-center">
                         <ul className={cn("w-full py-2", "md:py-4", "lg:py-6")}>
                            {EDUCATION_BACKGROUND.map(edu => (
@@ -81,7 +81,7 @@ const About: React.FC = () => {
                         {SKILLS.map(skill => (
                            <li
                               key={skill}
-                              className={`px-2 m-2 py-1 rounded-full bg-${getRandomColors()}-500`}
+                              className={`px-2 m-2 py-1 rounded-full ${getRandomColors()}`}
                            >
                               <p className="text-sm font-bold">{skill}</p>
                            </li>

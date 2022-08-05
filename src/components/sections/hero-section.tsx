@@ -1,13 +1,14 @@
 import About from "../about";
 import Landing from "../landing";
+import Wrapper from "../wrapper";
 
 const HeroSection: React.FC = () => {
    return (
       <section className="p-10 bg-pattern-image">
-         <div className="max-w-screen-2xl mx-auto">
+         <Wrapper>
             <Landing />
             <About />
-         </div>
+         </Wrapper>
       </section>
    );
 };

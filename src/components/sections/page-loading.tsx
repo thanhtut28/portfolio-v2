@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { HashLoader } from "react-spinners";
 interface Props {
    isVisible: boolean;
@@ -10,15 +10,17 @@ const variant: Variants = {
    },
    show: {
       opacity: 1,
+      y: "0%",
    },
    exit: {
-      opacity: 1,
+      opacity: 0,
+      y: "-100%",
    },
 };
 
 const PageLoading: React.FC<Props> = ({ isVisible }) => {
    return (
-      <AnimatePresence>
+      <>
          {isVisible && (
             <motion.div
                initial="hidden"
@@ -32,7 +34,7 @@ const PageLoading: React.FC<Props> = ({ isVisible }) => {
                </div>
             </motion.div>
          )}
-      </AnimatePresence>
+      </>
    );
 };
 

@@ -4,7 +4,6 @@ export interface DivProps extends React.ComponentPropsWithoutRef<"div"> {
 
 interface Props extends DivProps {
    className?: string | undefined;
-   variant?: "primary" | "secondary";
 }
 
 const BASE_CLASSES = `rounded-2xl border-2 border-black`;

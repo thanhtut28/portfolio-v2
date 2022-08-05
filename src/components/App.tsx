@@ -13,7 +13,7 @@ function App() {
       return () => clearTimeout(timeout);
    }, []);
 
-   return <div>{loading ? <PageLoading isVisible={loading} /> : <Home />}</div>;
+   return <>{loading ? <PageLoading isVisible={loading} /> : <Home />}</>;
 }
 
 export default App;

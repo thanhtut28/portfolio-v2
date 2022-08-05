@@ -148,6 +148,29 @@ const Landing: React.FC = () => {
          >
             <img src="/assets/pumpkin-full.png" alt="skull" className="w-full" />
          </motion.div>
+
+         {/* floating candy */}
+         <motion.div
+            className="absolute top-0 w-full h-full flex justify-center items-center overflow-hidden"
+            initial={{ x: 0, y: 0 }}
+            // all values divied by two
+            // because the container takes the full width and can't fix
+            animate={{
+               x: ["50%", "0%", "-50%", "-15%", "50%"],
+               y: ["-25%", "50%", "0%", "-50%", "-25%"],
+               rotate: 360,
+            }}
+            transition={{
+               duration: 10,
+               repeat: Infinity,
+            }}
+         >
+            <img
+               src="/assets/zombie-candy.png"
+               alt="skull"
+               className={cn("w-14", "sm:w-20", "md:w-26", "lg:w-32", "xl:w-36")}
+            />
+         </motion.div>
       </div>
    );
 };
