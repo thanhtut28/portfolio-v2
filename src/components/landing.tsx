@@ -50,7 +50,7 @@ const image: Variants = {
 
 const Landing: React.FC = () => {
    return (
-      <div className="relative pt-10 overflow-x-hidden">
+      <div className="relative pt-10">
          <motion.h2
             variants={leftText}
             initial="hidden"
