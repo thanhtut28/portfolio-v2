@@ -84,10 +84,8 @@
    }
 }
 
-* {
-  @apply overflow-x-hidden;
-}
+
 
 body {
-   @apply bg-white
+   @apply bg-white overflow-x-hidden;
 }
