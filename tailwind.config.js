@@ -9,6 +9,7 @@ module.exports = {
       extend: {
          fontFamily: {
             sans: ["Ginto Nord", "Neue Montreal", ...defaultTheme.fontFamily.sans],
+            neue: "Neue Montreal",
          },
 
          colors: {
@@ -20,6 +21,15 @@ module.exports = {
          },
          screens: {
             "small-phones": { max: "400px" },
+         },
+         animation: {
+            wave: "wave 30s linear infinite",
+         },
+         keyframes: {
+            wave: {
+               "0%": { transform: "rotate(0deg)" },
+               "100%": { transform: "rotate(3600deg)" },
+            },
          },
       },
    },

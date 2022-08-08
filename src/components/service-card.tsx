@@ -7,8 +7,8 @@ interface Props {
 }
 
 const BASE_CLASSES = cn(
-   "bg-white rounded-2xl p-8 mt-8 rounded-tl-[4rem] w-full lg:max-w-lg",
-   "lg:mt-0 lg:p-10"
+   "bg-white rounded-2xl p-8 mt-8 rounded-tl-[4rem] w-full",
+   "lg:mt-0 lg:p-10 lg:max-w-lg"
 );
 
 export const ServiceCard: React.FC<Props> = ({ title, body }) => {

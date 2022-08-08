@@ -6,6 +6,7 @@ const HeroSection: React.FC = () => {
    return (
       <section className="p-10 bg-pattern-image">
          <Wrapper>
+            <div className="my-8" />
             <Landing />
             <About />
          </Wrapper>

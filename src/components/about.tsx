@@ -1,16 +1,29 @@
 import { Card } from "./card";
 import { EDUCATION_BACKGROUND, SKILLS } from "../utils/constants";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import cn from "classnames";
 import { getRandomColors } from "../utils/getRandomColors";
+import { useRef } from "react";
 
 const About: React.FC = () => {
+   const ref = useRef<HTMLDivElement | null>(null);
+   const isInView = useInView(ref);
+
    return (
-      <div className="w-full py-32">
+      <motion.div
+         className="w-full py-32"
+         id="about"
+         ref={ref}
+         style={{
+            transform: isInView ? "translateX(0%)" : "translateX(-100%)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.5s linear",
+         }}
+      >
          <motion.div
             className={cn(
-               "-mx-8 group p-6 bg-neutral-100 rounded-2xl hover:bg-pixie-green transition-colors duration-300",
+               "-mx-8 group p-6 bg-neutral-100 rounded-2xl hover:bg-pixie-green-400 transition-colors duration-300",
                "sm:-mx-6 sm:p-8",
                "md:-mx-4 sm:p-12",
                "lg:mx-0 lg:p-16"
@@ -45,7 +58,7 @@ const About: React.FC = () => {
                      "lg:text-4xl lg:py-14"
                   )}
                >
-                  React Enthusiast who loves to work with GraphQL.
+                  Tech Enthusiast who loves to work with React and GraphQL
                </h6>
             </div>
             <div className={cn("grid grid-cols-1 items-stretch gap-4 py-10", "lg:grid-cols-2")}>
@@ -60,7 +73,7 @@ const About: React.FC = () => {
                   >
                      <h6 className="text-xl font-semibold">Educational Background</h6>
                      <div className="h-full flex items-center">
-                        <ul className={cn("w-full py-2", "md:py-4", "lg:py-6")}>
+                        <ul className={cn("w-full py-2 small-phones:py-4", "md:py-4", "lg:py-6")}>
                            {EDUCATION_BACKGROUND.map(edu => (
                               <Card
                                  key={edu.name}
@@ -81,7 +94,7 @@ const About: React.FC = () => {
                         {SKILLS.map(skill => (
                            <li
                               key={skill}
-                              className={`px-2 m-2 py-1 rounded-full ${getRandomColors()}`}
+                              className={`px-2 m-2 py-1 rounded-full capitalize bg-${getRandomColors()}-100`}
                            >
                               <p className="text-sm font-bold">{skill}</p>
                            </li>
@@ -125,7 +138,7 @@ const About: React.FC = () => {
                </div>
             </div>
          </motion.div>
-      </div>
+      </motion.div>
    );
 };
 

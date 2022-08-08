@@ -7,7 +7,10 @@ const Services: React.FC = () => {
    const [firstService, moreServices] = getServices();
 
    return (
-      <div className={cn("bg-pixie-green-400 py-20 px-4", "sm:px-6", "md:px-8", "lg:px-10")}>
+      <section
+         className={cn("bg-pixie-green-400 py-20 px-4", "sm:px-6", "md:px-8", "lg:px-10")}
+         id="services"
+      >
          <Wrapper>
             <div className={cn("lg:flex lg:gap-16 lg:items-end lg:justify-between")}>
                <div className="mb-10">
@@ -42,7 +45,7 @@ const Services: React.FC = () => {
                ))}
             </div>
          </Wrapper>
-      </div>
+      </section>
    );
 };
 

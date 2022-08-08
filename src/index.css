@@ -77,13 +77,21 @@
 @layer base {
    html {
       font-family: Ginto Nord, system-ui, sans-serif;
+      @apply overflow-x-hidden scroll-smooth;
    }
+
+   body {
+      @apply bg-white overflow-x-hidden scroll-smooth;
+   }
+
    p,
    h6 {
       font-family: Neue Montreal, sans-serif;
    }
 }
 
-body {
-   @apply bg-white overflow-x-hidden;
+@layer components {
+   .bg-gradient-circle-1 {
+      background-image: linear-gradient(30deg, #533f32, #f0b38c);
+   }
 }

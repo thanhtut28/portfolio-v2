@@ -50,7 +50,7 @@ const image: Variants = {
 
 const Landing: React.FC = () => {
    return (
-      <div className="relative pt-10">
+      <div className="relative pt-10" id="home">
          <motion.h2
             variants={leftText}
             initial="hidden"
@@ -143,15 +143,16 @@ const Landing: React.FC = () => {
                "sm:w-20 sm:right-1/4",
                "md:w-24 md:right-24",
                "lg:w-32 lg:top-20 lg:right-1/4",
-               "xl:w-36 xl:top-1/4 xl:right-1/4"
+               "xl:top-1/3 xl:right-1/4"
             )}
          >
             <img src="/assets/pumpkin-full.png" alt="skull" className="w-full" />
          </motion.div>
 
          {/* floating candy */}
+
          <motion.div
-            className="absolute top-0 w-full h-full flex justify-center items-center overflow-hidden"
+            className="absolute top-0 w-full h-full flex justify-center items-center"
             initial={{ x: 0, y: 0 }}
             // all values divied by two
             // because the container takes the full width and can't fix
@@ -168,7 +169,7 @@ const Landing: React.FC = () => {
             <img
                src="/assets/zombie-candy.png"
                alt="skull"
-               className={cn("w-14", "sm:w-20", "md:w-26", "lg:w-32", "xl:w-36")}
+               className={cn("w-14", "sm:w-20", "md:w-26", "lg:w-32")}
             />
          </motion.div>
       </div>
