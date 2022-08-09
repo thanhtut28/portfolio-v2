@@ -34,13 +34,13 @@ const Navigation: React.FC<Props> = ({ openMobileNav, setOpenMobileNav }) => {
    }, [lastYPos, openMobileNav]);
 
    return (
-      <motion.div
+      <motion.header
          className={cn(`fixed top-0 left-0 w-full py-2 z-50 lg:py-4`)}
          initial={{ y: 0 }}
          animate={{ y: shouldShowActions ? 0 : -200 }}
          transition={{ y: { duration: 0.4 } }}
       >
-         <div
+         <nav
             className={cn(
                "relative px-4 max-w-screen-2xl z-50 w-full mx-auto",
                "sm:px-6",
@@ -48,7 +48,7 @@ const Navigation: React.FC<Props> = ({ openMobileNav, setOpenMobileNav }) => {
                "lg:px-10"
             )}
          >
-            <div className="flex bg-black rounded-full bg-opacity-75 backdrop-blur-md px-2 border border-gray-400">
+            <div className="flex bg-black rounded-full bg-opacity-75 backdrop-blur-sm px-2 border border-gray-400">
                <div className={cn("flex items-center px-4", "sm:px-6", "md:px-8")}>
                   <h1
                      className={cn(
@@ -85,7 +85,7 @@ const Navigation: React.FC<Props> = ({ openMobileNav, setOpenMobileNav }) => {
                   </button>
                </div>
             </div>
-         </div>
+         </nav>
 
          <div
             className={`lg:hidden fixed top-0 left-0 bottom-0 right-0 w-full h-[100vh] pt-20 p-8 bg-black z-40  transition-all duration-500 ${
@@ -96,15 +96,17 @@ const Navigation: React.FC<Props> = ({ openMobileNav, setOpenMobileNav }) => {
                {NAVIGATIONS.map(nav => (
                   <li
                      key={nav}
-                     className="font-neue transition-all cursor-pointer text-white text-lg font-semibold hover:text-pixie-green capitalize py-6 border-b border-white border-opacity-10"
+                     className="font-neue transition-all cursor-pointer text-white font-semibold hover:text-pixie-green capitalize py-6 border-b border-white border-opacity-10 text-lg md:text-xl"
                      onClick={() => setOpenMobileNav(false)}
                   >
-                     <a href={`#${nav}`}>{nav}</a>
+                     <a className="w-full block" href={`#${nav}`}>
+                        {nav}
+                     </a>
                   </li>
                ))}
             </ul>
          </div>
-      </motion.div>
+      </motion.header>
    );
 };
 

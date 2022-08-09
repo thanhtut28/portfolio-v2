@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navigation from "../navigation";
+import Contact from "./contact";
 import Hero from "./hero";
 import Projects from "./projects";
 import Services from "./services";
@@ -10,10 +11,12 @@ export default function Home() {
    return (
       <>
          <Navigation openMobileNav={openMobileNav} setOpenMobileNav={setOpenMobileNav} />
-
-         <Hero />
-         <Services />
-         <Projects />
+         <main>
+            <Hero />
+            <Services />
+            <Projects />
+         </main>
+         <Contact />
       </>
    );
 }

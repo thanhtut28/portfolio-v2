@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
             </div>
             <div
                className={cn(
-                  "grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-screen-lg mx-auto bg-neutral-100 rounded-2xl p-6",
+                  "grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-screen-lg mx-auto bg-neutral-100 rounded-2xl p-6 mb-20",
                   "small-phones:p-4",
                   "sm:p-6",
                   "md:p-8",

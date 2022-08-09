@@ -58,14 +58,17 @@ const About: React.FC = () => {
                      "lg:text-4xl lg:py-14"
                   )}
                >
-                  Tech Enthusiast who loves to work with React and GraphQL
+                  Tech Enthusiast who loves to work with React and
+                  <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-apricot-peach-700 relative inline-block mx-2">
+                     <span className="relative text-white">GraphQL</span>
+                  </span>
                </h6>
             </div>
             <div className={cn("grid grid-cols-1 items-stretch gap-4 py-10", "lg:grid-cols-2")}>
                <div className={cn("pl-0", "lg:pl-6")}>
                   <Card
                      className={cn(
-                        "bg-white h-full rounded-2xl border-2 border-black px-4 py-3",
+                        "h-full px-4 py-3",
                         "sm:px-6 sm:py-4",
                         "md:px-8 md:py-6",
                         "lg:px-10 lg:py8"
@@ -89,7 +92,7 @@ const About: React.FC = () => {
                </div>
                <div className={cn("pr-0 flex flex-col gap-4", "lg:pr-6")}>
                   {/* skills */}
-                  <Card className="bg-white rounded-2xl border-2 border-black p-2">
+                  <Card className="p-2">
                      <ul className="flex flex-wrap">
                         {SKILLS.map(skill => (
                            <li
@@ -104,7 +107,7 @@ const About: React.FC = () => {
                   {/* socials */}
 
                   <div className={cn("grid grid-cols-1 gap-4 h-full", "sm:grid-cols-2")}>
-                     <Card className="bg-white p-4 xl:flex">
+                     <Card className="p-4 xl:flex">
                         <div className="pr-2">
                            <AiFillGithub size="2rem" />
                         </div>
@@ -119,7 +122,7 @@ const About: React.FC = () => {
                            </div>
                         </div>
                      </Card>
-                     <Card className="bg-white p-4 xl:flex">
+                     <Card className="p-4 xl:flex">
                         <div className="pr-2">
                            <AiFillLinkedin size="2rem" />
                         </div>

@@ -6,7 +6,7 @@ interface Props extends DivProps {
    className?: string | undefined;
 }
 
-const BASE_CLASSES = `rounded-2xl border-2 border-black`;
+const BASE_CLASSES = `bg-white rounded-2xl border-2 border-black`;
 
 export const Card: React.FC<Props> = ({ className, children, ...rest }) => {
    const classes = `${BASE_CLASSES} ${className}`;

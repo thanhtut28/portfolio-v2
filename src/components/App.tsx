@@ -3,7 +3,7 @@ import Home from "./sections";
 import PageLoading from "./page-loading";
 
 function App() {
-   const [loading, setLoading] = useState(false);
+   const [loading, setLoading] = useState(true);
 
    useEffect(() => {
       const timeout = setTimeout(() => {
