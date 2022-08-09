@@ -36,7 +36,7 @@ const Navigation: React.FC<Props> = ({ openMobileNav, setOpenMobileNav }) => {
    return (
       <motion.header
          className={cn(`fixed top-0 left-0 w-full py-2 z-50 lg:py-4`)}
-         initial={{ y: 0 }}
+         initial={false}
          animate={{ y: shouldShowActions ? 0 : -200 }}
          transition={{ y: { duration: 0.4 } }}
       >
@@ -96,7 +96,7 @@ const Navigation: React.FC<Props> = ({ openMobileNav, setOpenMobileNav }) => {
                {NAVIGATIONS.map(nav => (
                   <li
                      key={nav}
-                     className="font-neue transition-all cursor-pointer text-white font-semibold hover:text-pixie-green capitalize py-6 border-b border-white border-opacity-10 text-lg md:text-xl"
+                     className="font-neue transition-all cursor-pointer text-white font-semibold hover:text-pixie-green capitalize py-6 border-b border-white border-opacity-10 text-lg sm:text-xl md:text-2xl"
                      onClick={() => setOpenMobileNav(false)}
                   >
                      <a className="w-full block" href={`#${nav}`}>

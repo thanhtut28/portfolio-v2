@@ -15,11 +15,12 @@ const About: React.FC = () => {
          className="w-full py-32"
          id="about"
          ref={ref}
-         style={{
-            transform: isInView ? "translateX(0%)" : "translateX(-100%)",
+         initial={{ x: "-100%", opacity: 0 }}
+         animate={{
+            x: isInView ? "0%" : "-100%",
             opacity: isInView ? 1 : 0,
-            transition: "all 0.5s linear",
          }}
+         transition={{ duration: 0.5, ease: "linear" }}
       >
          <motion.div
             className={cn(

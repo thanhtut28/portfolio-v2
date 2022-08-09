@@ -50,11 +50,11 @@ const Contact: React.FC = () => {
             <div className="flex w-full">
                <div
                   className={cn(
-                     "bg-neutral-100 px-4 py-6 rounded-2xl w-full",
-                     "small-phones:px-3",
-                     "sm:px-6 sm:py-8",
-                     "lg:px-8 lg:py-10",
-                     "xl:px-10 xl:py-14"
+                     "bg-neutral-100 p-4 rounded-2xl w-full",
+                     "small-phones:p-3",
+                     "sm:p-6",
+                     "lg:p-8",
+                     "xl:p-10"
                   )}
                >
                   <h6 className={cn("text-2xl text-black font-semibold", "sm:text-3xl")}>
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div
                      className={cn(
-                        "grid grid-cols-1 gap-0 py-6",
+                        "grid grid-cols-1 py-6",
                         "md:grid-cols-3 md:gap-4",
                         "lg:grid-cols-1 lg:gap-0",
                         "xl:grid-cols-3 xl:gap-4"
@@ -129,7 +129,12 @@ const Contact: React.FC = () => {
                            Socials
                         </h6>
                         <Card className="py-1 px-2 rounded-full flex items-center">
-                           <div className="w-9 h-9 bg-pixie-green-400 border-2 border-black rounded-full flex justify-center items-center">
+                           <div
+                              className={cn(
+                                 "w-9 h-9 bg-pixie-green-400 border-2 border-black rounded-full flex justify-center items-center",
+                                 "small-phones:w-8 small-phones:h-8"
+                              )}
+                           >
                               <a
                                  href="https://github.com/thanhtut28"
                                  target="_blank"
@@ -138,7 +143,12 @@ const Contact: React.FC = () => {
                                  <AiOutlineGithub size="1.7rem" />
                               </a>
                            </div>
-                           <div className="w-9 h-9 ml-1.5 bg-apricot-peach-400 border-2 border-black rounded-full flex justify-center items-center">
+                           <div
+                              className={cn(
+                                 "w-9 h-9 bg-apricot-peach-400 border-2 border-black rounded-full flex justify-center items-center ml-1.5",
+                                 "small-phones:w-8 small-phones:h-8"
+                              )}
+                           >
                               <a
                                  href="https://www.linkedin.com/in/than-htut-aung-a80490202/"
                                  target="_blank"
