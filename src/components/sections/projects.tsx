@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
             </div>
             <div
                className={cn(
-                  "grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-screen-lg mx-auto bg-neutral-100 rounded-2xl p-6 mb-20",
+                  "grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-screen-lg mx-auto bg-neutral-100 rounded-3xl p-6 mb-20",
                   "small-phones:p-4",
                   "sm:p-6",
                   "md:p-8",
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
                   <div
                      key={project.title}
                      className={cn(
-                        `p-6 rounded-3xl bg-black ${index === 2 ? "sm:col-span-2" : ""}`,
+                        `p-6 rounded-2xl bg-black ${index === 2 ? "sm:col-span-2" : ""}`,
                         "small-phones:p-4",
                         "sm:p-6",
                         "lg:p-8",
@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
                         <img
                            src={`./assets/${project.img}.png`}
                            alt="rose-stream"
-                           className="rounded-2xl object-cover"
+                           className="rounded-xl object-cover"
                         />
                      </div>
 
