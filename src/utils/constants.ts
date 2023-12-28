@@ -55,10 +55,22 @@ export const PROJECTS = [
       img: "yoeyar-baydin",
       link: "https://yoeyar-baydin.vercel.app",
    },
+
+   {
+      title: "Stargazing",
+      subtitle: "Local Streetwear Brand",
+      img: "stargazing",
+      link: "https://stargazing-otw.vercel.app",
+   },
    {
       title: "UMT Store",
       subtitle: "Store POS System",
       img: "umt-pos",
+   },
+   {
+      title: "POS Store",
+      subtitle: "Store POS System",
+      img: "pos-img",
    },
 ];
 
