@@ -47,7 +47,6 @@ export const PROJECTS = [
       title: "Rose Stream",
       subtitle: "Movie Streaming Service",
       img: "rose-stream",
-      link: "https://rosestream.watch",
    },
    {
       title: "Yoeyar Baydin",
