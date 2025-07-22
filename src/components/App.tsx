@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Home from "./sections";
 import PageLoading from "./page-loading";
