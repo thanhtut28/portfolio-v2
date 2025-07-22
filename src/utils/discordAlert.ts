@@ -1,4 +1,4 @@
-interface DiscordMessage {
+export interface DiscordMessage {
    content?: string;
    embeds?: Array<{
       title?: string;
@@ -14,13 +14,6 @@ interface DiscordMessage {
 }
 
 export const sendDiscordAlert = async (): Promise<void> => {
-   const webhookUrl = process.env.REACT_APP_DISCORD_WEBHOOK_URL;
-
-   if (!webhookUrl) {
-      console.warn("Discord webhook URL not configured");
-      return;
-   }
-
    try {
       const now = new Date();
       const userAgent = navigator.userAgent;
@@ -75,7 +68,7 @@ export const sendDiscordAlert = async (): Promise<void> => {
          ],
       };
 
-      const response = await fetch(webhookUrl, {
+      const response = await fetch("/api/visitor-alert", {
          method: "POST",
          headers: {
             "Content-Type": "application/json",
@@ -84,10 +77,8 @@ export const sendDiscordAlert = async (): Promise<void> => {
       });
 
       if (!response.ok) {
-         throw new Error(`Discord webhook failed: ${response.status}`);
+         throw new Error("Failed to send Discord alert");
       }
-
-      console.log("Discord alert sent successfully");
    } catch (error) {
       console.error("Failed to send Discord alert:", error);
    }
