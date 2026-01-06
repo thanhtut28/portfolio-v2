@@ -115,11 +115,11 @@ const About: React.FC = () => {
                         <div className={cn("flex flex-col pt-2 xl:pt-0", "sm:pt-3", "lg:pt-4")}>
                            <div className="px-2 pb-1">
                               <h6 className="text-small">Contributions</h6>
-                              <p className="text-md font-semibold">500+</p>
+                              <p className="text-md font-semibold">4000+</p>
                            </div>
                            <div className="px-2 py-1">
                               <h6 className="text-small">Production</h6>
-                              <p className="text-md font-semibold">3</p>
+                              <p className="text-md font-semibold">9</p>
                            </div>
                         </div>
                      </Card>
@@ -130,7 +130,7 @@ const About: React.FC = () => {
                         <div className={cn("flex flex-col pt-2 xl:pt-0", "sm:pt-3", "lg:pt-4")}>
                            <div className="px-2 pb-1">
                               <h6 className="text-small">Connections</h6>
-                              <p className="text-md font-semibold">40+</p>
+                              <p className="text-md font-semibold">260+</p>
                            </div>
                            <div className="px-2 py-1">
                               <h6 className="text-small">Skill Assessments</h6>

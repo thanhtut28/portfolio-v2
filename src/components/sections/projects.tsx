@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
                   <div
                      key={project.title}
                      className={cn(
-                        `p-6 rounded-2xl bg-black ${index === 2 ? "sm:col-span-2" : ""}`,
+                        `p-6 rounded-2xl bg-black`,
                         "small-phones:p-4",
                         "sm:p-6",
                         "lg:p-8",

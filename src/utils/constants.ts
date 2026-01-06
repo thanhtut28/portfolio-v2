@@ -1,11 +1,15 @@
 export const EDUCATION_BACKGROUND = [
    {
+      name: "British United College",
+      date: "2025-present",
+   },
+   {
       name: "KBTC University, School of Information Technology",
-      date: "2022-present",
+      date: "2022-2025",
    },
    {
       name: "University Of Technology, Yatanarpon Cyber City (Pyin Oo Lwin)",
-      date: "2015-present",
+      date: "2015-2020",
    },
 ];
 
@@ -44,6 +48,20 @@ export const SERVICES = [
 
 export const PROJECTS = [
    {
+      title: "Rangoon Bkk",
+      subtitle: "Blindbox and Acessories",
+      img: "rangoon-bkk",
+      link: "https://www.rangoonbkk.online/",
+   },
+
+   {
+      title: "Stargazing",
+      subtitle: "Local Streetwear Brand",
+      img: "stargazing",
+      link: "https://www.stargazingotw.world",
+   },
+
+   {
       title: "Rose Stream",
       subtitle: "Movie Streaming Service",
       img: "rose-stream",
@@ -55,12 +73,6 @@ export const PROJECTS = [
       link: "https://yoeyar-baydin.vercel.app",
    },
 
-   {
-      title: "Stargazing",
-      subtitle: "Local Streetwear Brand",
-      img: "stargazing",
-      link: "https://stargazing-otw.vercel.app",
-   },
    {
       title: "UMT Store",
       subtitle: "Store POS System",
